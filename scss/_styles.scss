@@ -1,0 +1,125 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;600&family=Roboto&display=swap");
+body {
+  padding-top: 50px;
+  &:before {
+    z-index: 10001;
+    line-height: 20px;
+    font-weight: bold;
+    text-align: center;
+    position: fixed;
+    font-size: 20px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 20px;
+    background: limegreen;
+    content: "Xsmall";
+  }
+  @include media-breakpoint-up(sm) {
+    &:before {
+      content: "small";
+      background: #f00;
+    }
+  }
+  @include media-breakpoint-up(md) {
+    font-size: $font-size-base;
+    &:before {
+      content: "middle";
+      background: green;
+    }
+  }
+  @include media-breakpoint-up(lg) {
+    &:before {
+      content: "Large";
+      background: turquoise;
+    }
+  }
+  @include media-breakpoint-up(xl) {
+    &:before {
+      content: "XLarge";
+      background: #f09;
+    }
+  }
+  @include media-breakpoint-up(xxl) {
+    &:before {
+      content: "XXLarge";
+      background: #90f;
+    }
+  }
+}
+.contentwhite {
+  height: 590px;
+}
+.title {
+  h1 {
+    font-size: 30px;
+  }
+  p {
+    color: #707070;
+    font-size: 16px;
+  }
+}
+.services {
+  div {
+  }
+}
+.contentblue {
+  background: #131a1d;
+  height: 470px;
+  h1 {
+    color: #ffe600;
+    padding-top: 60px;
+    padding-bottom: 25px;
+  }
+  h2 {
+    color: white;
+    padding-top: 60px;
+    padding-bottom: 15px;
+    text-transform: uppercase;
+  }
+  h2::before {
+    content: "";
+    position: absolute;
+
+    background-size: cover;
+  }
+  h2.analyse::before {
+    background: url(../images/sprite/sprite.svg#analyse-ico);
+    width: 41px;
+    height: 45px;
+  }
+  h2.preparing::before {
+    background: url(../images/sprite/sprite.svg#preparing-ico);
+    width: 43px;
+    height: 44px;
+  }
+  h2.working::before {
+    background: url(../images/sprite/sprite.svg#working-ico);
+    width: 44px;
+    height: 42px;
+  }
+  h2.finalyse::before {
+    background: url(../images/sprite/sprite.svg#finalyse-ico);
+    width: 43px;
+    height: 45px;
+  }
+  h2.testing::before {
+    background: url(../images/sprite/sprite.svg#testing-ico);
+    width: 39px;
+    height: 41px;
+  }
+  h2.deliver::before {
+    background: url(../images/sprite/sprite.svg#deliver-ico);
+    width: 36px;
+    height: 36px;
+  }
+  .icon {
+    width: 44px;
+    height: auto;
+  }
+  p {
+    color: white;
+    padding-bottom: 10px;
+    font-size: 16px;
+  }
+}
