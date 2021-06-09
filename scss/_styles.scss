@@ -50,11 +50,13 @@ body {
     padding-top: 60px;
     padding-bottom: 15px;
     text-transform: uppercase;
+    position: relative;
   }
   h2::before {
     content: "";
     position: absolute;
-
+    top: -3px;
+    left: 64px;
     background-size: cover;
   }
   h2.analyse::before {
